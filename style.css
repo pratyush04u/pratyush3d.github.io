@@ -1,150 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-* { margin:0; padding:0; box-sizing:border-box; }
+ * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif; }
 
 body {
-  font-family: Inter, sans-serif;
   background: radial-gradient(circle at top, #0a0a0a, #000);
-  color: #fff;
+  color:#eaeaea;
 }
 
-.glass {
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
+/* NAV */
 .nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 10;
+  position:fixed;
+  top:0; width:100%;
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  backdrop-filter: blur(12px);
+  background:rgba(0,0,0,0.4);
+  z-index:10;
 }
 
-.logo span { color:#8affb3; }
-
-nav a {
-  margin-left:30px;
+.nav a {
+  margin-left:20px;
   color:#aaa;
   text-decoration:none;
-  position:relative;
-}
-
-nav a::after {
-  content:"";
-  position:absolute;
-  width:0;
-  height:2px;
-  bottom:-6px;
-  left:0;
-  background:#8affb3;
   transition:.3s;
 }
+.nav a:hover { color:#f5ff3b; }
 
-nav a:hover::after { width:100%; }
-
+/* HERO */
 .hero {
   min-height:100vh;
-  padding:140px 80px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:140px 10%;
 }
 
-.hero h1 span { color:#8affb3; }
+.hero h1 {
+  font-size:60px;
+  margin:20px 0;
+}
+.accent { color:#f5ff3b; }
 
-.image-frame img {
+.hero-img {
+  position:relative;
+}
+.hero-img img {
   width:320px;
-  border-radius:14px;
+  border-radius:16px;
+}
+.glare {
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  background:linear-gradient(120deg, transparent, rgba(255,255,0,.2), transparent);
+  animation:glare 4s infinite;
+}
+@keyframes glare {
+  from { transform:translateX(-100%); }
+  to { transform:translateX(100%); }
 }
 
-.about, .work, .contact {
-  padding:120px 80px;
+/* SECTIONS */
+.section {
+  padding:120px 10%;
+}
+.glass {
+  background:rgba(255,255,255,0.03);
+  backdrop-filter: blur(14px);
 }
 
-.skills span {
-  display:inline-block;
-  margin:10px;
-  padding:8px 14px;
-  border-radius:20px;
-  background:rgba(255,255,255,.05);
-  transition:.3s;
-}
-
-.skills span:hover {
-  transform:scale(1.08);
-  background:rgba(138,255,179,.15);
-}
-
+/* WORK */
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
-
-.card img { width:100%; border-radius:14px; }
-
 .card {
+  background:#111;
+  padding:30px;
+  border-radius:14px;
   cursor:pointer;
   transition:.3s;
 }
-
-.card:hover { transform:scale(1.04); }
-
-.modal {
-  position:fixed;
-  inset:0;
-  display:none;
-  background:rgba(0,0,0,.9);
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+.card:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(245,255,59,.2);
 }
 
-.modal img, .modal video {
-  max-width:70%;
-  margin-bottom:20px;
+/* SOFTWARE */
+.software img {
+  width:48px;
+  margin:10px;
+  filter:grayscale(1);
+  transition:.3s;
+}
+.software img:hover {
+  filter:none;
+  transform:scale(1.1);
 }
 
-.close {
-  font-size:40px;
-  cursor:pointer;
-  margin-bottom:20px;
-}
-
-.contact {
+/* CONTACT */
+.contact-wrap {
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:30px;
 }
-
-input, textarea {
+form input, form textarea {
   width:100%;
-  margin-bottom:12px;
   padding:12px;
-  background:rgba(255,255,255,.05);
-  border:none;
-  color:white;
+  margin-bottom:10px;
+  background:#000;
+  border:1px solid #333;
+  color:#fff;
 }
-
-button {
-  background:#8affb3;
+form button {
+  background:#f5ff3b;
   border:none;
   padding:14px;
   cursor:pointer;
 }
 
-#thankyou {
-  display:none;
-  text-align:center;
-  padding:80px;
-  color:#8affb3;
+.social img {
+  width:32px;
+  margin:10px;
 }
 
-footer {
-  padding:40px;
-  text-align:center;
-  color:#666;
+/* MODAL */
+.modal {
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+}
+.modal-content {
+  margin:80px auto;
+  max-width:900px;
+}
+.close {
+  position:absolute;
+  top:30px; right:40px;
+  font-size:40px;
+  cursor:pointer;
 }
