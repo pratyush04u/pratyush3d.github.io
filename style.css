@@ -44,9 +44,12 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("hero-bg.png") left 40% top / cover no-repeat;
-  opacity: 0.45;
-  z-index: 0;
+  background: url("hero-bg.png") left 60% top / 1100px auto no-repeat;
+  opacity: 0.35;
+  filter: blur(1.2px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 55%, rgba(0,0,0,0));
+}
+
 }
 
 /* bottom soft blend */
@@ -255,3 +258,4 @@ h3 {
   opacity: 1;
   transform: translateY(0);
 }
+
