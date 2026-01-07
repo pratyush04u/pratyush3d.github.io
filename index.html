@@ -1,108 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Pratyush Biswas | 3D Artist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAV -->
 <header class="navbar">
   <div class="logo">PRATYUSH<span>3D</span></div>
-
-  <div class="social-top">
-    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank"><img src="logos/social/artstation.png"></a>
-    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank"><img src="logos/social/linkedin.png"></a>
-    <a href="https://www.instagram.com/pratyush_b_official" target="_blank"><img src="logos/social/instagram.png"></a>
-    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank"><img src="logos/social/facebook.png"></a>
+  <div class="socials">
+    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">A</a>
+    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">in</a>
+    <a href="https://www.instagram.com/pratyush_b_official" target="_blank">ig</a>
+    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">fb</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero reveal">
-  <div class="hero-overlay"></div>
+<section class="hero">
+  <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <h1 class="hero-name">Pratyush Biswas</h1>
-    <h2 class="hero-tagline">Concepts Forged Into <span>3D Visuals</span></h2>
-    <p class="hero-sub">Hard-Surface · Game Assets · Product Visualization</p>
+  <div class="hero-content reveal">
+    <h1>Pratyush Biswas</h1>
+    <h2>Concepts Forged Into <span>3D Visuals</span></h2>
+    <p>Hard-Surface · Game Assets · Product Visualization</p>
 
     <div class="hero-buttons">
-      <a href="#work" class="btn glass green">View Work</a>
-      <a href="Pratyush_Biswas_CV.pdf" class="btn glass yellow" download>Download CV</a>
+      <button onclick="scrollToWork()">View Work</button>
+      <a href="Pratyush_Biswas_CV.pdf" download class="btn-outline">Download CV</a>
     </div>
   </div>
 
-  <div class="hero-portrait">
+  <div class="hero-photo reveal">
     <img src="me.png" alt="Pratyush Biswas">
   </div>
 </section>
 
-<!-- TOOLS -->
-<section class="section reveal">
-  <h2>Tools</h2>
-  <div class="tools-grid">
-    <img src="logos/software/blender.png">
-    <img src="logos/software/substance-painter.png">
-    <img class="dark-logo" src="logos/software/zbrush.png">
-    <img class="dark-logo" src="logos/software/unreal-engine.png">
-    <img src="logos/software/photoshop.png">
-    <img src="logos/software/after-effects.png">
-  </div>
+<!-- ABOUT -->
+<section class="about reveal">
+  <h2>About Me</h2>
+  <p>
+    I’m Pratyush Biswas, a 3D Artist with 4+ years of hands-on experience working across game studios,
+    freelance projects, and production-driven environments. I specialize in hard-surface modeling,
+    game-ready assets, and product visualization, following industry-level workflows from clean topology
+    and optimized UVs to final rendering and presentation.
+  </p>
+</section>
+
+<!-- SOFTWARE -->
+<section class="software reveal">
+  <img src="logos/maya.png">
+  <img src="logos/blender.png">
+  <img src="logos/substance.png">
+  <img src="logos/unreal.png">
+  <img src="logos/marmoset.png">
+  <img src="logos/photoshop.png">
 </section>
 
 <!-- WORK -->
-<section id="work" class="section reveal">
+<section id="work" class="work reveal">
   <h2>Selected Work</h2>
 
-  <div class="project-grid">
-    <div class="project-card" data-project="vintage-wall-phone">
-      <img src="media/vintage-wall-phone/cover.png">
+  <div class="grid">
+    <div class="card" onclick="openProject('vintage-wall-phone')">
+      <img src="media/vintage-wall-phone/cover.jpg">
       <span>Vintage Wall Phone</span>
     </div>
 
-    <div class="project-card" data-project="awm-custom-skin">
-      <img src="media/awm-custom-skin/cover.png">
+    <div class="card" onclick="openProject('awm-custom-skin')">
+      <img src="media/awm-custom-skin/cover.jpg">
       <span>AWM – Custom Skin</span>
     </div>
 
-    <div class="project-card" data-project="old-radio-game-prop">
-      <img src="media/old-radio-game-prop/cover.png">
+    <div class="card" onclick="openProject('old-radio-game-prop')">
+      <img src="media/old-radio-game-prop/cover.jpg">
       <span>Old Radio – Game Prop</span>
     </div>
 
-    <div class="project-card" data-project="cosmetic-product-visualization">
-      <img src="media/cosmetic-product-visualization/cover.png">
+    <div class="card" onclick="openProject('cosmetic-product-visualization')">
+      <img src="media/cosmetic-product-visualization/cover.jpg">
       <span>Cosmetic Product Visualization</span>
     </div>
   </div>
 </section>
 
 <!-- MODAL -->
-<div class="modal" id="modal">
-  <button class="close">×</button>
-  <button class="nav prev">‹</button>
-  <button class="nav next">›</button>
-  <div class="modal-content"></div>
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <button class="nav prev" onclick="prevImg()">‹</button>
+  <img id="modal-img">
+  <button class="nav next" onclick="nextImg()">›</button>
 </div>
-
-<!-- CONTACT -->
-<section class="section reveal contact">
-  <h2>Connect with Pratyush Biswas</h2>
-
-  <form action="https://formspree.io/f/mpqwvpdp" method="POST">
-    <input name="firstName" placeholder="First Name" required>
-    <input name="lastName" placeholder="Last Name">
-    <input type="email" name="email" placeholder="Email" required>
-    <input name="phone" placeholder="Phone">
-    <textarea name="message" placeholder="Your Message"></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
 
 <script src="script.js"></script>
 </body>
 </html>
-
