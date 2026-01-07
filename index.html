@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Pratyush Biswas | 3D Artist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
@@ -10,7 +10,7 @@
 <body>
 
 <header class="nav">
-  <div class="logo">PRATYUSH3D</div>
+  <div class="logo">PRATYUSH<span>3D</span></div>
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -20,108 +20,116 @@
 </header>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="home" class="hero reveal">
   <div class="hero-text">
-    <span class="tag">Pratyush Biswas</span>
-    <span class="subtag">3D Artist · Hard Surface · Game Assets</span>
-
-    <h1>
-      CONCEPT INTO<br>
-      <span class="accent">3D VISUALS</span>
-    </h1>
-
-    <p>
-      Translating ideas and blueprints into production-ready,
-      real-time 3D assets with precision and clarity.
+    <p class="hero-name">PRATYUSH BISWAS</p>
+    <h1>Concepts Forged Into <span>3D Visuals</span></h1>
+    <p class="hero-desc">
+      Hard-surface focused 3D artist creating production-ready,
+      real-time assets with clean topology and strong presentation.
     </p>
-
-    <div class="buttons">
+    <div class="hero-actions">
       <a href="#work" class="btn primary">View Work</a>
-      <a href="media/PRATYUSH CV.pdf" class="btn ghost" download>Download CV</a>
+      <a href="media/PRATYUSH CV.pdf" class="btn outline" download>Download CV</a>
     </div>
   </div>
 
-  <div class="hero-img">
-    <img src="media/me.png" alt="Pratyush">
-    <div class="glare"></div>
+  <div class="hero-image">
+    <img src="media/me.png" alt="Pratyush Biswas">
+    <div class="rim-glow"></div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section glass">
+<section id="about" class="section reveal">
   <h2>About Me</h2>
-  <p class="hover-text">
-    I am a 3D Artist specializing in hard-surface modeling,
-    game-ready assets and realistic materials.
-  </p>
-  <p class="hover-text">
-    I work across cinematic visuals, props and product
-    visualization with strong focus on topology, texturing
-    and real-time presentation.
+  <p>
+    I’m a 3D Artist specializing in hard-surface modeling, game assets
+    and product visualization, focusing on clean workflows,
+    realistic materials and industry-ready presentation.
   </p>
 
-  <h3>Software</h3>
-  <div class="software">
+  <h3>Tools I Use</h3>
+  <div class="tools">
     <img src="logos/software/maya.png">
     <img src="logos/software/blender.png">
     <img src="logos/software/zbrush.png">
     <img src="logos/software/substance-painter.png">
     <img src="logos/software/photoshop.png">
+    <img src="logos/software/after-effects.png">
     <img src="logos/software/marmoset-toolbag.png">
+    <img src="logos/software/quixel-megascans.png">
+    <img src="logos/software/rizom-uv.png">
     <img src="logos/software/unity.png">
     <img src="logos/software/unreal-engine.png">
   </div>
 </section>
 
 <!-- WORK -->
-<section id="work" class="section">
+<section id="work" class="section reveal">
   <h2>Selected Work</h2>
-
-  <div class="grid">
-    <div class="card" onclick="openProject('vintage-phone')">
-      <img src="media/vintage-phone/1.png">
-      <span>Vintage Wall Phone</span>
-    </div>
-
-    <div class="card"><span>AWM – Custom Skin</span></div>
-    <div class="card"><span>Old Radio – Game Prop</span></div>
-    <div class="card"><span>Cosmetic Product Visualization</span></div>
+  <div class="work-grid">
+    <div class="work-card" data-project="vintage-phone">Vintage Wall Phone</div>
+    <div class="work-card" data-project="awm">AWM – Custom Skin</div>
+    <div class="work-card" data-project="old-radio">Old Radio – Game Prop</div>
+    <div class="work-card" data-project="cosmetic">Cosmetic Product Visualization</div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section glass">
-  <h2>Connect with Pratyush Biswas</h2>
+<section id="contact" class="section contact reveal">
+  <div class="contact-left">
+    <h2>Connect with <span>Pratyush Biswas</span></h2>
+    <p class="contact-sub">Have a project, idea, or just want to talk 3D?</p>
 
-  <div class="contact-wrap">
-
-    <form id="contactForm">
-      <input type="text" placeholder="First Name" required>
-      <input type="text" placeholder="Last Name">
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone">
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <form id="contactForm"
+      action="https://formspree.io/f/mpqwvpdp"
+      method="POST">
+      <input name="firstName" placeholder="First Name" required>
+      <input name="lastName" placeholder="Last Name">
+      <input type="email" name="email" placeholder="Email" required>
+      <input name="phone" placeholder="Phone">
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Signal 🚀</button>
     </form>
 
-    <video src="media/contact-video.mp4" autoplay loop muted></video>
+    <div id="contactSuccess">
+      <h3>Signal received.</h3>
+      <p>I’ll get back to you as soon as possible.</p>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">
+        <img src="logos/social/artstation.png">
+      </a>
+      <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">
+        <img src="logos/social/linkedin.png">
+      </a>
+      <a href="https://www.instagram.com/pratyush_b_official" target="_blank">
+        <img src="logos/social/instagram.png">
+      </a>
+      <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">
+        <img src="logos/social/facebook.png">
+      </a>
+    </div>
   </div>
 
-  <div class="social">
-    <a href="https://www.artstation.com/pratyushbiswas2"><img src="logos/social/artstation.png"></a>
-    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2"><img src="logos/social/linkedin.png"></a>
-    <a href="https://www.instagram.com/pratyush_b_official"><img src="logos/social/instagram.png"></a>
-    <a href="https://www.facebook.com/share/15UVmNqVnVA/"><img src="logos/social/facebook.png"></a>
+  <div class="contact-right">
+    <video src="media/contact-video.mp4" autoplay muted loop></video>
+    <div class="abstract-overlay"></div>
   </div>
 </section>
 
+<footer class="footer">
+  © 2026 Pratyush Biswas · 3D Artist
+</footer>
+
 <!-- PROJECT MODAL -->
-<div id="projectModal" class="modal">
-  <span class="close" onclick="closeProject()">×</span>
-  <div class="modal-content">
-    <img src="media/vintage-phone/1.png">
-    <img src="media/vintage-phone/2.png">
-    <video src="media/vintage-phone/demo.mp4" controls></video>
+<div id="projectModal" class="project-modal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content"></div>
   </div>
 </div>
 
