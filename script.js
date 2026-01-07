@@ -1,30 +1,62 @@
+/* REVEAL + REVERSE */
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  { threshold: 0.25 }
+);
+
+reveals.forEach(el => observer.observe(el));
+
+/* MODAL PROJECT VIEW */
 const modal = document.getElementById("modal");
-const modalContent = document.getElementById("modal-content");
+const modalContent = document.querySelector(".modal-content");
 const closeBtn = document.querySelector(".close");
+let currentProject = [];
+let index = 0;
 
-document.querySelectorAll(".project").forEach(card => {
-  card.addEventListener("click", () => {
+document.querySelectorAll(".project-card").forEach(card => {
+  card.onclick = () => {
     const folder = card.dataset.project;
-    if (!folder) return;
-
+    currentProject = [];
     modalContent.innerHTML = "";
-    for (let i = 1; i <= 9; i++) {
-      const img = document.createElement("img");
+
+    for (let i = 1; i <= 20; i++) {
+      const img = new Image();
       img.src = `media/${folder}/${i}.png`;
-      img.style.width = "100%";
-      img.style.marginBottom = "10px";
-      modalContent.appendChild(img);
+      img.onload = () => currentProject.push(img.src);
+      img.onerror = () => {};
     }
 
-    const video = document.createElement("video");
-    video.src = `media/${folder}/Demo.mp4`;
-    video.controls = true;
-    video.style.width = "100%";
-    modalContent.appendChild(video);
-
-    modal.style.display = "flex";
-  });
+    setTimeout(() => {
+      if (currentProject.length > 0) {
+        showImage(0);
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    }, 300);
+  };
 });
 
-closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+function showImage(i) {
+  index = i;
+  modalContent.innerHTML = `<img src="${currentProject[index]}">`;
+}
+
+document.querySelector(".next").onclick = () =>
+  showImage((index + 1) % currentProject.length);
+document.querySelector(".prev").onclick = () =>
+  showImage((index - 1 + currentProject.length) % currentProject.length);
+
+closeBtn.onclick = () => {
+  modal.classList.remove("active");
+  document.body.style.overflow = "";
+};
