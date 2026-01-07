@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pratyush Biswas | 3D Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="logo">PRATYUSH<span>3D</span></div>
+
+  <div class="social">
+    <a href="https://www.artstation.com/pratyushbiswas2"
+       target="_blank" rel="noopener noreferrer">
+      <img src="logos/social/artstation.png" alt="ArtStation">
+    </a>
+
+    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2"
+       target="_blank" rel="noopener noreferrer">
+      <img src="logos/social/linkedin.png" alt="LinkedIn">
+    </a>
+
+    <a href="https://www.instagram.com/pratyush_b_official"
+       target="_blank" rel="noopener noreferrer">
+      <img src="logos/social/instagram.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.facebook.com/share/15UVmNqVnVA/"
+       target="_blank" rel="noopener noreferrer">
+      <img src="logos/social/facebook.png" alt="Facebook">
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- hero background handled via CSS -->
+  <div class="hero-bg" data-bg="hero-bg.png"></div>
+
+  <div class="hero-content">
+    <h1>Pratyush Biswas</h1>
+    <h2>Concepts Forged Into <span>3D Visuals</span></h2>
+    <p>Hard-Surface · Game Assets · Product Visualization</p>
+
+    <div class="hero-buttons">
+      <a href="#work" class="btn">View Work</a>
+      <a href="Pratyush_Biswas_CV.pdf"
+         class="btn outline"
+         download>
+        Download CV
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="me.png" alt="Pratyush Biswas">
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools reveal">
+  <h3>Tools I Use</h3>
+
+  <div class="tools-grid">
+    <img src="logos/software/maya.png" alt="Maya">
+    <img src="logos/software/blender.png" alt="Blender">
+    <img src="logos/software/zbrush.png" alt="ZBrush">
+    <img src="logos/software/substance-painter.png" alt="Substance Painter">
+    <img src="logos/software/marmoset-toolbag.png" alt="Marmoset Toolbag">
+    <img src="logos/software/photoshop.png" alt="Photoshop">
+    <img src="logos/software/unreal-engine.png" alt="Unreal Engine">
+    <img src="logos/software/unity.png" alt="Unity">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about reveal">
+  <h3>About Me</h3>
+
+  <p>
+    I am a dedicated <strong>3D Artist</strong> specializing in
+    <strong>hard-surface modeling, game-ready assets, and product visualization</strong>.
+  </p>
+
+  <p>
+    With experience working on <strong>game props, realistic product renders,
+    and studio-style production pipelines</strong>, I follow industry-standard
+    workflows from blockout to final delivery.
+  </p>
+
+  <p>
+    I work comfortably across tools like
+    <strong>Maya, Blender, ZBrush, Substance Painter, Marmoset Toolbag,
+    Unreal Engine, and Unity</strong>, ensuring assets are optimized,
+    clean, and production-ready.
+  </p>
+
+  <p>
+    My focus is always on <strong>visual clarity, realism, and technical correctness</strong>.
+  </p>
+</section>
+
+<!-- WORK -->
+<section id="work" class="work reveal">
+  <h3>Selected Work</h3>
+
+  <div class="work-grid">
+
+    <div class="card"
+         data-project="awm-custom-skin"
+         data-title="AWM Custom Skin">
+      <img src="media/awm-custom-skin/cover.png" alt="AWM Custom Skin">
+      <span>AWM Custom Skin</span>
+    </div>
+
+    <div class="card"
+         data-project="cosmetic-product-visualization"
+         data-title="Cosmetic Product Visualization">
+      <img src="media/cosmetic-product-visualization/cover.jpg" alt="Cosmetic Product">
+      <span>Cosmetic Product Visualization</span>
+    </div>
+
+    <div class="card"
+         data-project="old-radio-game-prop"
+         data-title="Old Radio Game Prop">
+      <img src="media/old-radio-game-prop/cover.png" alt="Old Radio Prop">
+      <span>Old Radio Game Prop</span>
+    </div>
+
+    <div class="card"
+         data-project="vintage-wall-phone"
+         data-title="Vintage Wall Phone">
+      <img src="media/vintage-wall-phone/cover.png" alt="Vintage Wall Phone">
+      <span>Vintage Wall Phone</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact reveal">
+  <h3>Contact With Pratyush Biswas</h3>
+
+  <form action="https://formspree.io/f/mpqwvpdp" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="modal" aria-hidden="true">
+  <div class="modal-overlay"></div>
+
+  <div class="modal-inner">
+    <button class="close" aria-label="Close">&times;</button>
+
+    <h4 class="modal-title"></h4>
+
+    <div class="modal-gallery">
+      <!-- images injected via JS -->
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
