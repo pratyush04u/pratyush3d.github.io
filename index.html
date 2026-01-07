@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pratyush Biswas | 3D Artist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- NAV -->
-<header class="nav">
+<!-- ================= HEADER ================= -->
+<header class="navbar">
   <div class="logo">PRATYUSH<span>3D</span></div>
 
   <div class="social-top">
@@ -35,97 +36,94 @@
   </nav>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero parallax">
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
   <div class="hero-text">
-    <small>Pratyush Biswas · 3D Artist</small>
+    <h4>Pratyush Biswas · 3D Artist</h4>
     <h1>Concepts Forged Into <span>3D Visuals</span></h1>
     <p>Hard-Surface · Game Assets · Product Visualization</p>
 
-    <div class="cta">
-      <a href="#work" class="btn glass yellow">View Work</a>
-      <a href="media/cv/Pratyush_Biswas_CV.pdf"
-         class="btn glass green" download>
-         Download CV
+    <div class="hero-buttons">
+      <a href="#work" class="btn glass green">View Work</a>
+      <a href="media/Pratyush_Biswas_CV.pdf" target="_blank" class="btn glass yellow">
+        Download CV
       </a>
     </div>
   </div>
 
-  <div class="hero-image parallax-fast">
+  <div class="hero-image">
     <img src="media/me.png" alt="Pratyush Biswas">
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section reveal">
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
   <h2>About</h2>
   <p>
     I’m a 3D Artist specializing in hard-surface modeling, game-ready assets and
-    product visualization, with a strong focus on clean topology,
-    materials and presentation.
+    product visualization, with strong focus on clean topology, realistic materials
+    and presentation. I also work as a freelance 3D artist.
   </p>
 
-  <h3>Tools</h3>
   <div class="tools">
     <img src="media/logos/software/maya.png">
     <img src="media/logos/software/blender.png">
-    <img src="media/logos/software/zbrush.png">
     <img src="media/logos/software/substance-painter.png">
     <img src="media/logos/software/photoshop.png">
     <img src="media/logos/software/after-effects.png">
     <img src="media/logos/software/marmoset-toolbag.png">
     <img src="media/logos/software/unity.png">
     <img src="media/logos/software/unreal-engine.png">
-    <img src="media/logos/software/rizom-uv.png">
-    <img src="media/logos/software/quixel-megascans.png">
+    <img src="media/logos/software/zbrush.png">
   </div>
 </section>
 
-<!-- WORK -->
-<section id="work" class="section reveal">
+<!-- ================= WORK ================= -->
+<section class="work" id="work">
   <h2>Selected Work</h2>
 
   <div class="projects">
-    <div class="project-card" data-project="vintage-wall-phone">
+    <div class="project" data-project="vintage-wall-phone">
       <img src="media/vintage-wall-phone/cover.png">
       <span>Vintage Wall Phone</span>
     </div>
 
-    <div class="project-card" data-project="awm-custom-skin">
+    <div class="project" data-project="awm-custom-skin">
       <img src="media/awm-custom-skin/cover.png">
       <span>AWM – Custom Skin</span>
+    </div>
+
+    <div class="project">
+      <img src="media/vintage-wall-phone/cover.png">
+      <span>Old Radio – Game Prop</span>
+    </div>
+
+    <div class="project">
+      <img src="media/vintage-wall-phone/cover.png">
+      <span>Cosmetic Product Visualization</span>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact reveal">
-  <div class="contact-left">
-    <h2>Connect with <span>Pratyush Biswas</span></h2>
-
-    <form action="https://formspree.io/f/mpqwvpdp" method="POST" id="contactForm">
-      <input name="firstName" placeholder="First Name" required>
-      <input name="lastName" placeholder="Last Name">
-      <input type="email" name="email" placeholder="Email" required>
-      <input name="phone" placeholder="Phone">
-      <textarea name="message" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn yellow">Send Signal 🚀</button>
-      <p class="success">Signal received. I’ll get back soon 👀</p>
-    </form>
-  </div>
-
-  <div class="contact-right parallax-slow">
-    <video src="media/contact-video.mp4" autoplay muted loop></video>
-  </div>
-</section>
-
-<!-- MODAL -->
-<div id="modal">
-  <div class="modal-inner">
-    <span id="closeModal">&times;</span>
-    <div id="modalContent"></div>
-  </div>
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content" id="modal-content"></div>
 </div>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <h2>Connect with <span>Pratyush Biswas</span></h2>
+
+  <form action="https://formspree.io/f/mpqwvpdp" method="POST">
+    <input type="text" name="first-name" placeholder="First Name" required>
+    <input type="text" name="last-name" placeholder="Last Name">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Phone">
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button type="submit" class="btn green">Submit</button>
+  </form>
+</section>
 
 <script src="script.js"></script>
 </body>
