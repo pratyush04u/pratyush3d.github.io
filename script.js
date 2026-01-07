@@ -1,32 +1,34 @@
-const projects = [
-  {
-    title: "Vintage Wall Phone",
-    folder: "vintage-wall-phone"
-  },
-  {
-    title: "AWM – Custom Skin",
-    folder: "awm-custom-skin"
-  },
-  {
-    title: "Old Radio – Game Prop",
-    folder: "old-radio-game-prop"
-  },
-  {
-    title: "Cosmetic Product Visualization",
-    folder: "cosmetic-product-visualization"
-  }
-];
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
 
-const grid = document.getElementById("projectGrid");
-
-projects.forEach(project => {
-  const card = document.createElement("div");
-  card.className = "project-card";
-
-  card.innerHTML = `
-    <img src="media/${project.folder}/cover.jpg" alt="${project.title}">
-    <h3>${project.title}</h3>
-  `;
-
-  grid.appendChild(card);
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const win = window.innerHeight;
+    if (top < win - 100) el.classList.add("active");
+    else el.classList.remove("active");
+  });
 });
+
+/* MODAL PROJECT VIEW */
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal-content");
+const close = document.querySelector(".close");
+
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalContent.innerHTML = "";
+
+    const folder = card.dataset.project;
+
+    for (let i = 1; i <= 12; i++) {
+      const img = document.createElement("img");
+      img.src = `media/${folder}/${i}.png`;
+      img.onerror = () => img.remove();
+      modalContent.appendChild(img);
+    }
+  });
+});
+
+close.onclick = () => modal.style.display = "none";
