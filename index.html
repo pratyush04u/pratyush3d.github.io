@@ -1,130 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Pratyush Biswas | 3D Artist</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- NAV -->
 <header class="navbar">
   <div class="logo">PRATYUSH<span>3D</span></div>
 
   <div class="social-top">
-    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">
-      <img src="media/logos/social/artstation.png">
-    </a>
-    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">
-      <img src="media/logos/social/linkedin.png">
-    </a>
-    <a href="https://www.instagram.com/pratyush_b_official" target="_blank">
-      <img src="media/logos/social/instagram.png">
-    </a>
-    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">
-      <img src="media/logos/social/facebook.png">
-    </a>
+    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank"><img src="logos/social/artstation.png"></a>
+    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank"><img src="logos/social/linkedin.png"></a>
+    <a href="https://www.instagram.com/pratyush_b_official" target="_blank"><img src="logos/social/instagram.png"></a>
+    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank"><img src="logos/social/facebook.png"></a>
   </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <div class="hero-text">
-    <h4>Pratyush Biswas · 3D Artist</h4>
-    <h1>Concepts Forged Into <span>3D Visuals</span></h1>
-    <p>Hard-Surface · Game Assets · Product Visualization</p>
+<!-- HERO -->
+<section class="hero reveal">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-name">Pratyush Biswas</h1>
+    <h2 class="hero-tagline">Concepts Forged Into <span>3D Visuals</span></h2>
+    <p class="hero-sub">Hard-Surface · Game Assets · Product Visualization</p>
 
     <div class="hero-buttons">
       <a href="#work" class="btn glass green">View Work</a>
-      <a href="media/Pratyush_Biswas_CV.pdf" target="_blank" class="btn glass yellow">
-        Download CV
-      </a>
+      <a href="Pratyush_Biswas_CV.pdf" class="btn glass yellow" download>Download CV</a>
     </div>
   </div>
 
-  <div class="hero-image">
-    <img src="media/me.png" alt="Pratyush Biswas">
+  <div class="hero-portrait">
+    <img src="me.png" alt="Pratyush Biswas">
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="about" id="about">
-  <h2>About</h2>
-  <p>
-    I’m a 3D Artist specializing in hard-surface modeling, game-ready assets and
-    product visualization, with strong focus on clean topology, realistic materials
-    and presentation. I also work as a freelance 3D artist.
-  </p>
-
-  <div class="tools">
-    <img src="media/logos/software/maya.png">
-    <img src="media/logos/software/blender.png">
-    <img src="media/logos/software/substance-painter.png">
-    <img src="media/logos/software/photoshop.png">
-    <img src="media/logos/software/after-effects.png">
-    <img src="media/logos/software/marmoset-toolbag.png">
-    <img src="media/logos/software/unity.png">
-    <img src="media/logos/software/unreal-engine.png">
-    <img src="media/logos/software/zbrush.png">
+<!-- TOOLS -->
+<section class="section reveal">
+  <h2>Tools</h2>
+  <div class="tools-grid">
+    <img src="logos/software/blender.png">
+    <img src="logos/software/substance-painter.png">
+    <img class="dark-logo" src="logos/software/zbrush.png">
+    <img class="dark-logo" src="logos/software/unreal-engine.png">
+    <img src="logos/software/photoshop.png">
+    <img src="logos/software/after-effects.png">
   </div>
 </section>
 
-<!-- ================= WORK ================= -->
-<section class="work" id="work">
+<!-- WORK -->
+<section id="work" class="section reveal">
   <h2>Selected Work</h2>
 
-  <div class="projects">
-    <div class="project" data-project="vintage-wall-phone">
+  <div class="project-grid">
+    <div class="project-card" data-project="vintage-wall-phone">
       <img src="media/vintage-wall-phone/cover.png">
       <span>Vintage Wall Phone</span>
     </div>
 
-    <div class="project" data-project="awm-custom-skin">
+    <div class="project-card" data-project="awm-custom-skin">
       <img src="media/awm-custom-skin/cover.png">
       <span>AWM – Custom Skin</span>
     </div>
 
-    <div class="project">
-      <img src="media/vintage-wall-phone/cover.png">
+    <div class="project-card" data-project="old-radio-game-prop">
+      <img src="media/old-radio-game-prop/cover.png">
       <span>Old Radio – Game Prop</span>
     </div>
 
-    <div class="project">
-      <img src="media/vintage-wall-phone/cover.png">
+    <div class="project-card" data-project="cosmetic-product-visualization">
+      <img src="media/cosmetic-product-visualization/cover.png">
       <span>Cosmetic Product Visualization</span>
     </div>
   </div>
 </section>
 
-<!-- ================= MODAL ================= -->
+<!-- MODAL -->
 <div class="modal" id="modal">
-  <span class="close">&times;</span>
-  <div class="modal-content" id="modal-content"></div>
+  <button class="close">×</button>
+  <button class="nav prev">‹</button>
+  <button class="nav next">›</button>
+  <div class="modal-content"></div>
 </div>
 
-<!-- ================= CONTACT ================= -->
-<section class="contact" id="contact">
-  <h2>Connect with <span>Pratyush Biswas</span></h2>
+<!-- CONTACT -->
+<section class="section reveal contact">
+  <h2>Connect with Pratyush Biswas</h2>
 
   <form action="https://formspree.io/f/mpqwvpdp" method="POST">
-    <input type="text" name="first-name" placeholder="First Name" required>
-    <input type="text" name="last-name" placeholder="Last Name">
+    <input name="firstName" placeholder="First Name" required>
+    <input name="lastName" placeholder="Last Name">
     <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="phone" placeholder="Phone">
+    <input name="phone" placeholder="Phone">
     <textarea name="message" placeholder="Your Message"></textarea>
-    <button type="submit" class="btn green">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </section>
 
 <script src="script.js"></script>
 </body>
 </html>
+
