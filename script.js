@@ -1,48 +1,30 @@
-/* REVEAL */
-const reveals=document.querySelectorAll('.reveal');
-const io=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting) e.target.classList.add('active');
+const modal = document.getElementById("modal");
+const modalContent = document.getElementById("modal-content");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".project").forEach(card => {
+  card.addEventListener("click", () => {
+    const folder = card.dataset.project;
+    if (!folder) return;
+
+    modalContent.innerHTML = "";
+    for (let i = 1; i <= 9; i++) {
+      const img = document.createElement("img");
+      img.src = `media/${folder}/${i}.png`;
+      img.style.width = "100%";
+      img.style.marginBottom = "10px";
+      modalContent.appendChild(img);
+    }
+
+    const video = document.createElement("video");
+    video.src = `media/${folder}/Demo.mp4`;
+    video.controls = true;
+    video.style.width = "100%";
+    modalContent.appendChild(video);
+
+    modal.style.display = "flex";
   });
 });
-reveals.forEach(r=>io.observe(r));
 
-/* PARALLAX */
-window.addEventListener('scroll',()=>{
-  document.querySelectorAll('.parallax').forEach(el=>{
-    el.style.transform=`translateY(${window.scrollY*0.1}px)`;
-  });
-  document.querySelectorAll('.parallax-fast').forEach(el=>{
-    el.style.transform=`translateY(${window.scrollY*0.2}px)`;
-  });
-});
-
-/* MODAL */
-const modal=document.getElementById('modal');
-const modalContent=document.getElementById('modalContent');
-const closeModal=document.getElementById('closeModal');
-
-document.querySelectorAll('.project-card').forEach(card=>{
-  card.onclick=()=>{
-    const key=card.dataset.project;
-    modalContent.innerHTML='';
-    fetchProject(key);
-    modal.style.display='block';
-  }
-});
-
-function fetchProject(key){
-  modalContent.innerHTML+=`
-    <img src="media/${key}/cover.png">
-  `;
-}
-
-closeModal.onclick=()=>modal.style.display='none';
-
-/* FORM */
-const form=document.getElementById('contactForm');
-form.addEventListener('submit',()=>{
-  setTimeout(()=>{
-    form.querySelector('.success').style.display='block';
-  },600);
-});
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
