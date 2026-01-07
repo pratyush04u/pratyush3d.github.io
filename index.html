@@ -1,84 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Pratyush | 3D Artist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
+<!-- NAV -->
+<header class="nav glass">
   <div class="logo">PRATYUSH<span>3D</span></div>
   <nav>
     <a href="#home">Home</a>
-    <a href="#works">Works</a>
+    <a href="#work">Work</a>
     <a href="https://pratyushbiswas2.artstation.com/" target="_blank">ArtStation</a>
-    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-left">
-    <p class="tagline reveal">3D ARTIST · HARD SURFACE · GAME ASSETS</p>
+  <div class="hero-left reveal from-left">
+    <p class="tag">3D ARTIST · HARD SURFACE · GAME ASSETS</p>
 
-    <h1 class="reveal">
-      PRATYUSH BISWAS<br>
-      <span>CONCEPTS FORGED INTO</span><br>
-      3D VISUALS
+    <h1>
+      CONCEPT INTO<br>
+      <span>3D VISUALS</span>
     </h1>
 
-    <p class="desc reveal">
-      I am a 3D Artist specializing in hard-surface modeling and game-ready assets.
-      I focus on clean topology, realistic materials, and strong real-time presentation.
+    <p class="desc">
+      Translating ideas and blueprints into production-ready,
+      real-time 3D assets with precision and clarity.
     </p>
-
-    <div class="cta reveal">
-      <a class="btn" href="#works">View Works</a>
-      <a class="btn secondary"
-         href="https://pratyushbiswas2.artstation.com/"
-         target="_blank">
-         ArtStation
-      </a>
-    </div>
   </div>
 
-  <div class="hero-right reveal">
-    <img src="media/me.png" alt="Pratyush 3D Artist Portrait">
+  <div class="hero-right reveal from-right">
+    <div class="image-frame glass">
+      <img src="media/me.png" alt="Pratyush portrait">
+    </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="portfolio" id="works">
-  <h2 class="reveal">SELECTED WORKS</h2>
+<!-- WORK -->
+<section class="work" id="work">
+  <h2 class="reveal from-bottom">SELECTED WORK</h2>
 
   <div class="grid">
-    <img class="reveal" src="media/work1.jpg">
-    <img class="reveal" src="media/work2.jpg">
-    <img class="reveal" src="media/work3.jpg">
-    <img class="reveal" src="media/work4.jpg">
+    <div class="card reveal from-bottom"><img src="media/work1.png"></div>
+    <div class="card reveal from-bottom"><img src="media/work2.png"></div>
+    <div class="card reveal from-bottom"><img src="media/work3.png"></div>
   </div>
-
-  <a class="btn secondary reveal"
-     href="https://pratyushbiswas2.artstation.com/"
-     target="_blank">
-     View Full Portfolio
-  </a>
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
-  <p>© 2026 Pratyush — 3D Artist</p>
-  <p>
-    <a href="https://pratyushbiswas2.artstation.com/" target="_blank">
-      ArtStation
-    </a>
-  </p>
+<footer class="glass reveal from-bottom">
+  <p>© 2026 Pratyush Biswas · 3D Artist</p>
 </footer>
 
-<!-- SCROLL ANIMATION SCRIPT -->
+<!-- SCROLL SCRIPT -->
 <script>
   const observer = new IntersectionObserver(
     entries => {
@@ -88,7 +68,7 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.12 }
   );
 
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
@@ -96,6 +76,3 @@
 
 </body>
 </html>
-
-
-
