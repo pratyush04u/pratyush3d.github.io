@@ -12,61 +12,87 @@
 <header class="navbar">
   <div class="logo">PRATYUSH<span>3D</span></div>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Portfolio</a>
+    <a href="#home">Home</a>
+    <a href="#works">Works</a>
     <a href="https://pratyushbiswas2.artstation.com/" target="_blank">ArtStation</a>
-    <a href="#">Contact</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
   <div class="hero-left">
-    <p class="tagline">3D ARTIST · HARD SURFACE · GAME ASSETS</p>
+    <p class="tagline reveal">3D ARTIST · HARD SURFACE · GAME ASSETS</p>
 
-    <h1>
-      CREATING<br />
-      <span>CINEMATIC</span><br />
+    <h1 class="reveal">
+      CREATING<br>
+      <span>CINEMATIC</span><br>
       3D VISUALS
     </h1>
 
-    <p class="desc">
+    <p class="desc reveal">
       I am a 3D Artist specializing in hard-surface modeling and game-ready assets.
-      I focus on clean topology, realistic materials, and strong real-time presentation
-      for games and cinematic visuals.
+      I focus on clean topology, realistic materials, and strong real-time presentation.
     </p>
 
-    <div class="cta">
-      <a class="btn" href="#">View Portfolio</a>
+    <div class="cta reveal">
+      <a class="btn" href="#works">View Works</a>
       <a class="btn secondary"
          href="https://pratyushbiswas2.artstation.com/"
          target="_blank">
-         View ArtStation
+         ArtStation
       </a>
     </div>
   </div>
 
-  <div class="hero-right">
-    <!-- USE IMAGE OR VIDEO -->
-    <img src="media/hero.png" alt="3D Artist Portfolio Preview" />
-
-    <!--
-    <video src="media/hero.mp4" autoplay muted loop></video>
-    -->
+  <div class="hero-right reveal">
+    <img src="media/me.jpg" alt="Pratyush 3D Artist Portrait">
   </div>
 </section>
 
+<!-- PORTFOLIO -->
+<section class="portfolio" id="works">
+  <h2 class="reveal">SELECTED WORKS</h2>
+
+  <div class="grid">
+    <img class="reveal" src="media/work1.jpg">
+    <img class="reveal" src="media/work2.jpg">
+    <img class="reveal" src="media/work3.jpg">
+    <img class="reveal" src="media/work4.jpg">
+  </div>
+
+  <a class="btn secondary reveal"
+     href="https://pratyushbiswas2.artstation.com/"
+     target="_blank">
+     View Full Portfolio
+  </a>
+</section>
+
 <!-- FOOTER -->
-<footer>
+<footer id="contact">
+  <p>© 2026 Pratyush — 3D Artist</p>
   <p>
-    ArtStation:
     <a href="https://pratyushbiswas2.artstation.com/" target="_blank">
-      artstation.com/pratyushbiswas2
+      ArtStation
     </a>
   </p>
-  <p>© 2026 Pratyush — 3D Artist</p>
 </footer>
+
+<!-- SCROLL ANIMATION SCRIPT -->
+<script>
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
