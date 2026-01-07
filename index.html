@@ -9,70 +9,116 @@
 
 <body>
 
-<!-- NAV -->
 <header class="nav glass">
   <div class="logo">PRATYUSH<span>3D</span></div>
   <nav>
     <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#work">Work</a>
-    <a href="https://pratyushbiswas2.artstation.com/" target="_blank">ArtStation</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-left reveal from-left">
+<section id="home" class="hero reveal">
+  <div class="hero-left">
     <p class="tag">3D ARTIST · HARD SURFACE · GAME ASSETS</p>
-
-    <h1>
-      CONCEPT INTO<br>
-      <span>3D VISUALS</span>
-    </h1>
-
+    <h1>CONCEPT INTO<br><span>3D VISUALS</span></h1>
     <p class="desc">
       Translating ideas and blueprints into production-ready,
       real-time 3D assets with precision and clarity.
     </p>
   </div>
 
-  <div class="hero-right reveal from-right">
+  <div class="hero-right">
     <div class="image-frame glass">
-      <img src="media/me.png" alt="Pratyush portrait">
+      <img src="media/me.png" alt="Pratyush">
     </div>
   </div>
 </section>
 
-<!-- WORK -->
-<section class="work" id="work">
-  <h2 class="reveal from-bottom">SELECTED WORK</h2>
+<!-- ABOUT -->
+<section id="about" class="about reveal">
+  <h2>ABOUT ME</h2>
+  <p>
+    I am a hard-surface 3D artist focused on creating optimized,
+    realistic assets for games and real-time engines.
+    My workflow emphasizes clean topology, PBR accuracy,
+    and production-ready presentation.
+  </p>
 
-  <div class="grid">
-    <div class="card reveal from-bottom"><img src="media/work1.png"></div>
-    <div class="card reveal from-bottom"><img src="media/work2.png"></div>
-    <div class="card reveal from-bottom"><img src="media/work3.png"></div>
+  <div class="skills">
+    <span>Hard Surface</span>
+    <span>Game Assets</span>
+    <span>PBR Workflow</span>
+    <span>Real-Time</span>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="glass reveal from-bottom">
-  <p>© 2026 Pratyush Biswas · 3D Artist</p>
+<!-- WORK -->
+<section id="work" class="work reveal">
+  <h2>SELECTED WORK</h2>
+
+  <div class="grid">
+    <div class="card" onclick="openProject('phone')">
+      <img src="media/vintage-wall-phone/cover.png">
+      <h3>Vintage Wall Phone</h3>
+    </div>
+
+    <div class="card" onclick="openProject('awm')">
+      <img src="media/awm-custom-skin/cover.png">
+      <h3>AWM with Custom Skin</h3>
+    </div>
+
+    <div class="card" onclick="openProject('radio')">
+      <img src="media/old-radio-prop/cover.png">
+      <h3>Old Radio Game Prop</h3>
+    </div>
+
+    <div class="card" onclick="openProject('cosmetic')">
+      <img src="media/cosmetic-product/cover.png">
+      <h3>Cosmetic Product Visualization</h3>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div id="projectModal" class="modal">
+  <span class="close" onclick="closeProject()">×</span>
+  <div id="projectContent"></div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+  <form id="contactForm"
+    action="https://formspree.io/f/xxxxx"
+    method="POST">
+
+    <h2>CONTACT ME</h2>
+
+    <input name="first" placeholder="First Name" required>
+    <input name="last" placeholder="Last Name">
+    <input type="email" name="email" placeholder="Email" required>
+    <input name="phone" placeholder="Phone">
+    <textarea name="message" placeholder="Your message"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="contact-video glass">
+    <video autoplay muted loop src="media/contact-video.mp4"></video>
+  </div>
+</section>
+
+<div id="thankyou">
+  😄 Thanks for the message!  
+  I’ll get back to you as soon as possible.
+</div>
+
+<footer class="glass">
+  © 2026 Pratyush Biswas · 3D Artist
 </footer>
 
-<!-- SCROLL SCRIPT -->
-<script>
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
