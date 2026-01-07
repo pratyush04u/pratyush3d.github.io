@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pratyush Biswas | 3D Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="logo">PRATYUSH<span>3D</span></div>
+
+  <nav class="social-icons">
+    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">
+      <img src="logos/social/artstation.png">
+    </a>
+    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">
+      <img src="logos/social/linkedin.png">
+    </a>
+    <a href="https://www.instagram.com/pratyush_b_official" target="_blank">
+      <img src="logos/social/instagram.png">
+    </a>
+    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">
+      <img src="logos/social/facebook.png">
+    </a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <h1>Pratyush Biswas</h1>
+    <h2>Concepts Forged Into <span>3D Visuals</span></h2>
+    <p>Hard-Surface · Game Assets · Product Visualization</p>
+
+    <div class="hero-buttons">
+      <a href="#work" class="btn primary">View Work</a>
+      <a href="Pratyush_Biswas_CV.pdf" class="btn secondary" download>Download CV</a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="me.png" alt="Pratyush Biswas">
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about reveal">
+  <h2>About Me</h2>
+  <p>
+    I’m a 3D Artist with 4+ years of experience working on game-ready assets,
+    hard-surface modeling, and product visualization. I’ve collaborated with
+    game studios and creative teams, following industry-level workflows with
+    a strong focus on clean topology, optimized assets, and high-quality
+    presentation. I’m comfortable handling full pipelines from blockout to
+    final render using modern tools and real-time engines.
+  </p>
+</section>
+
+<!-- ================= SOFTWARE ================= -->
+<section class="tools reveal">
+  <h2>Tools I Use</h2>
+  <div class="tools-grid">
+    <div class="tool black"><img src="logos/software/maya.png"></div>
+    <div class="tool black"><img src="logos/software/blender.png"></div>
+    <div class="tool black"><img src="logos/software/substance-painter.png"></div>
+    <div class="tool black"><img src="logos/software/substance-designer.png"></div>
+    <div class="tool black"><img src="logos/software/marmoset.png"></div>
+    <div class="tool black"><img src="logos/software/zbrush.png"></div>
+    <div class="tool black"><img src="logos/software/unity.png"></div>
+    <div class="tool black"><img src="logos/software/unreal.png"></div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work" class="work reveal">
+  <h2>Selected Work</h2>
+
+  <div class="projects">
+
+    <div class="project-card" data-project="vintage-wall-phone">
+      <img src="media/vintage-wall-phone/cover.jpg">
+      <span>Vintage Wall Phone</span>
+    </div>
+
+    <div class="project-card" data-project="awm-custom-skin">
+      <img src="media/awm-custom-skin/cover.jpg">
+      <span>AWM – Custom Skin</span>
+    </div>
+
+    <div class="project-card" data-project="old-radio-game-prop">
+      <img src="media/old-radio-game-prop/cover.jpg">
+      <span>Old Radio – Game Prop</span>
+    </div>
+
+    <div class="project-card" data-project="cosmetic-product-visualization">
+      <img src="media/cosmetic-product-visualization/cover.jpg">
+      <span>Cosmetic Product Visualization</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <button class="nav prev">&#10094;</button>
+  <img id="modal-img">
+  <button class="nav next">&#10095;</button>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact reveal">
+  <h2>Connect with Pratyush Biswas</h2>
+
+  <form action="https://formspree.io/f/mpqwvpdp" method="POST">
+    <input type="text" name="first-name" placeholder="First Name" required>
+    <input type="text" name="last-name" placeholder="Last Name">
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Your Message"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
