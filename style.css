@@ -1,170 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #1a1f4a, #05070f);
+  background: radial-gradient(circle at top, #080808, #000000 70%);
   color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-/* NAVBAR */
-.navbar {
+/* GLASS BASE */
+.glass {
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 80px;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .logo span {
-  color: #4fd1ff;
+  color: #8affb3;
 }
 
-.navbar nav a {
+nav a {
   margin-left: 30px;
-  color: #cfd8ff;
+  color: #888;
   text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
-.navbar nav a:hover {
-  color: #4fd1ff;
+nav a:hover {
+  color: #fff;
 }
 
 /* HERO */
 .hero {
-  min-height: calc(100vh - 80px);
-  padding: 80px;
+  min-height: 100vh;
+  padding: 140px 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .hero-left {
-  max-width: 520px;
+  max-width: 560px;
 }
 
-.tagline {
+.tag {
   font-size: 12px;
-  letter-spacing: 2px;
-  color: #7dd3ff;
+  letter-spacing: 3px;
+  color: #8affb3;
   margin-bottom: 20px;
 }
 
-.hero-left h1 {
-  font-size: 56px;
+.hero h1 {
+  font-size: 60px;
   line-height: 1.1;
-  margin-bottom: 25px;
 }
 
-.hero-left h1 span {
-  color: #4fd1ff;
+.hero h1 span {
+  color: #8affb3;
 }
 
 .desc {
-  font-size: 15px;
+  margin-top: 25px;
+  color: #999;
   line-height: 1.7;
-  color: #c7d2ff;
-  margin-bottom: 35px;
 }
 
-.cta {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  padding: 14px 32px;
-  border: 1px solid #4fd1ff;
-  color: #4fd1ff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #4fd1ff;
-  color: #05070f;
-}
-
-.btn.secondary {
-  border-color: #ffffff55;
-  color: #ffffffcc;
-}
-
-.btn.secondary:hover {
-  background: #ffffff;
-  color: #05070f;
+.hero-right .image-frame {
+  padding: 10px;
 }
 
 .hero-right img {
-  width: 340px;
-  border-radius: 18px;
-  padding: 6px;
-  background: linear-gradient(180deg, #11162a, #05070f);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+  width: 320px;
+  border-radius: 14px;
 }
 
-/* PORTFOLIO */
-.portfolio {
+/* WORK */
+.work {
   padding: 120px 80px;
-  text-align: center;
 }
 
-.portfolio h2 {
-  font-size: 30px;
-  letter-spacing: 4px;
-  margin-bottom: 60px;
+.work h2 {
+  margin-bottom: 50px;
+  letter-spacing: 3px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
-  margin-bottom: 60px;
+  gap: 30px;
 }
 
-.grid img {
+.card {
+  overflow: hidden;
+}
+
+.card img {
   width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.grid img:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 80px rgba(0,0,0,0.85);
+.card:hover img {
+  transform: scale(1.04);
 }
 
 /* FOOTER */
 footer {
   padding: 50px;
   text-align: center;
-  color: #9aa3ff;
-}
-
-footer a {
-  color: #4fd1ff;
-  text-decoration: none;
+  color: #666;
 }
 
 /* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .reveal.active {
   opacity: 1;
+}
+
+.from-bottom {
+  transform: translateY(60px);
+}
+
+.from-bottom.active {
   transform: translateY(0);
+}
+
+.from-left {
+  transform: translateX(-60px);
+}
+
+.from-left.active {
+  transform: translateX(0);
+}
+
+.from-right {
+  transform: translateX(60px);
+}
+
+.from-right.active {
+  transform: translateX(0);
 }
 
 /* RESPONSIVE */
@@ -178,12 +177,7 @@ footer a {
     margin-top: 40px;
   }
 
-  .cta {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .navbar {
-    padding: 25px 30px;
+  .nav {
+    padding: 20px 30px;
   }
 }
