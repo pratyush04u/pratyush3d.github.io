@@ -1,0 +1,127 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Inter,system-ui;
+  background:#000;
+  color:#eaeaea;
+  overflow-x:hidden;
+}
+
+/* NAV */
+.nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  backdrop-filter:blur(14px);
+  background:rgba(0,0,0,.6);
+  z-index:10;
+}
+.logo span{color:#c6ff00}
+.nav a{color:#aaa;margin-left:20px;text-decoration:none}
+.nav a:hover{color:#c6ff00}
+
+.social-top img{
+  width:22px;
+  margin-right:12px;
+  opacity:.7;
+}
+.social-top img:hover{opacity:1}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:160px 80px;
+}
+.hero h1 span{color:#c6ff00}
+.hero-image img{
+  max-width:360px;
+  border-radius:18px;
+  box-shadow:0 0 50px rgba(198,255,0,.2);
+}
+
+/* BUTTONS */
+.btn{
+  padding:14px 26px;
+  border-radius:30px;
+  margin-right:12px;
+  text-decoration:none;
+  display:inline-block;
+}
+.glass{
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,.08);
+}
+.yellow{border:1px solid #c6ff00;color:#c6ff00}
+.green{border:1px solid #2dffb3;color:#2dffb3}
+
+/* SECTIONS */
+.section{padding:140px 80px}
+.tools img{
+  width:44px;
+  margin:14px;
+  opacity:.7;
+}
+.tools img:hover{opacity:1;transform:scale(1.1)}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.project-card{
+  background:rgba(255,255,255,.06);
+  padding:20px;
+  border-radius:16px;
+  cursor:pointer;
+}
+.project-card img{
+  width:100%;
+  border-radius:12px;
+}
+.project-card:hover{transform:translateY(-6px)}
+
+/* CONTACT */
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:12px;
+  background:rgba(255,255,255,.05);
+  border:none;
+  color:#fff;
+}
+.success{display:none;color:#c6ff00;margin-top:20px}
+
+/* MODAL */
+#modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  background:rgba(0,0,0,.85);
+}
+.modal-inner{
+  margin:80px auto;
+  max-width:900px;
+  background:#050505;
+  padding:30px;
+}
+#closeModal{
+  font-size:32px;
+  cursor:pointer;
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px)}
+.reveal.active{opacity:1;transform:none;transition:.8s}
