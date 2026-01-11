@@ -11,14 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= THEME ================= */
-:root {
-  --accent-main: #10b981;   /* emerald */
-  --accent-soft: #34d399;   /* jade */
-  --accent-glow: rgba(16,185,129,0.6);
-  --accent-glow-soft: rgba(16,185,129,0.25);
-}
-
 /* ================= NAV ================= */
 .nav {
   position: absolute;
@@ -38,7 +30,7 @@ body {
 }
 
 .logo span {
-  color: var(--accent-main);
+  color: #6cff00;
 }
 
 /* Social near name/photo */
@@ -72,8 +64,8 @@ body {
   position: absolute;
   inset: 0;
 
-  /* 🔥 sniper slightly MORE up */
-  background: url("hero-bg.png") center -200px / cover no-repeat;
+  /* 🔥 sniper slightly up + left offset */
+  background: url("hero-bg.png") center -140px / cover no-repeat;
 
   opacity: 0.32;
   z-index: 0;
@@ -110,11 +102,11 @@ body {
 }
 
 .hero h2 span {
-  color: var(--accent-main);
+  color: #6cff00;
 }
 
 .hero p {
-  color: #c7f9e9;
+  color: #ccc;
 }
 
 .hero-buttons {
@@ -124,15 +116,15 @@ body {
 .btn {
   padding: 12px 26px;
   border-radius: 30px;
-  border: 2px solid var(--accent-main);
-  color: var(--accent-main);
+  border: 2px solid #6cff00;
+  color: #6cff00;
   margin-right: 15px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: var(--accent-main);
+  background: #6cff00;
   color: black;
 }
 
@@ -150,8 +142,8 @@ body {
   width: 320px;
   border-radius: 22px;
   box-shadow:
-    0 0 35px var(--accent-glow),
-    0 0 80px var(--accent-glow-soft);
+    0 0 40px rgba(108,255,0,0.6),
+    0 0 80px rgba(108,255,0,0.3);
 }
 
 /* ================= SECTIONS ================= */
@@ -177,12 +169,12 @@ h3 {
 .about p {
   max-width: 800px;
   line-height: 1.8;
-  color: #c7f9e9;
+  color: #ccc;
   margin-bottom: 20px;
 }
 
 .about strong {
-  color: var(--accent-main);
+  color: #6cff00;
 }
 
 /* ================= WORK ================= */
@@ -206,14 +198,13 @@ h3 {
 .card span {
   display: block;
   margin-top: 10px;
-  color: #d1fae5;
 }
 
 .card:hover img {
   transform: scale(1.04);
   box-shadow:
-    0 0 25px var(--accent-glow),
-    0 0 60px var(--accent-glow-soft);
+    0 0 25px rgba(108,255,0,0.4),
+    0 0 60px rgba(108,255,0,0.15);
 }
 
 /* ================= CONTACT ================= */
@@ -234,14 +225,10 @@ h3 {
 .contact button {
   padding: 12px;
   width: 100%;
-  background: var(--accent-main);
+  background: #6cff00;
   border: none;
   font-weight: bold;
   cursor: pointer;
-}
-
-.contact button:hover {
-  background: var(--accent-soft);
 }
 
 /* ================= MODAL ================= */
@@ -279,45 +266,4 @@ h3 {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ================= MOBILE OPTIMIZATION ================= */
-@media (max-width: 768px) {
-
-  .nav {
-    padding: 14px 18px;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 110px 18px 60px;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero-photo {
-    margin: 42px auto 0;
-  }
-
-  .hero-photo img {
-    width: 240px;
-  }
-
-  section {
-    padding: 80px 18px;
-  }
-
-  h3 {
-    font-size: 28px;
-  }
-
-  .work-grid {
-    grid-template-columns: 1fr;
-  }
 }
