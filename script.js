@@ -1,21 +1,20 @@
-/* ================= SCROLL REVEAL ================= */
+/* SCROLL REVEAL */
 const reveals = document.querySelectorAll(".reveal");
-
 window.addEventListener("scroll", () => {
   reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 120) {
+    if (el.getBoundingClientRect().top < window.innerHeight - 120) {
       el.classList.add("active");
     }
   });
 });
 
-/* ================= MODAL PROJECT VIEW ================= */
+/* MODAL */
 const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const closeBtn = document.querySelector(".close");
 
-const extensions = ["png", "jpg", "webp"];
+const imageExt = ["png","jpg","webp"];
+const videoExt = ["mp4","webm"];
 
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("click", () => {
@@ -24,38 +23,42 @@ document.querySelectorAll(".card").forEach(card => {
     document.body.style.overflow = "hidden";
 
     const folder = card.dataset.project;
-    let loaded = false;
+    let found = false;
 
-    for (let i = 1; i <= 12; i++) {
-      extensions.forEach(ext => {
-        const img = new Image();
-        img.src = `media/${folder}/${i}.${ext}`;
-
-        img.onload = () => {
-          loaded = true;
+    for(let i=1;i<=12;i++){
+      imageExt.forEach(ext=>{
+        const img=new Image();
+        img.src=`media/${folder}/${i}.${ext}`;
+        img.onload=()=>{
+          found=true;
           modalContent.appendChild(img);
-        };
+        }
+      });
+
+      videoExt.forEach(ext=>{
+        const v=document.createElement("video");
+        v.src=`media/${folder}/video-${i}.${ext}`;
+        v.controls=true;
+        v.onloadeddata=()=>{
+          found=true;
+          modalContent.appendChild(v);
+        }
       });
     }
 
-    setTimeout(() => {
-      if (!loaded) {
-        modalContent.innerHTML =
-          "<p style='text-align:center;color:#777'>No additional images found.</p>";
+    setTimeout(()=>{
+      if(!found){
+        modalContent.innerHTML="<p style='text-align:center'>No media found</p>";
       }
-    }, 800);
+    },900);
   });
 });
 
-/* ================= CLOSE MODAL ================= */
-function closeModal() {
-  modal.style.display = "none";
-  modalContent.innerHTML = "";
-  document.body.style.overflow = "auto";
+function closeModal(){
+  modal.style.display="none";
+  modalContent.innerHTML="";
+  document.body.style.overflow="auto";
 }
 
-closeBtn.addEventListener("click", closeModal);
-
-modal.addEventListener("click", e => {
-  if (e.target === modal) closeModal();
-});
+closeBtn.onclick=closeModal;
+modal.onclick=e=>{ if(e.target===modal) closeModal(); };
