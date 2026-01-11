@@ -152,7 +152,7 @@ h3 {
   margin-bottom: 40px;
 }
 
-/* ================= TOOLS (FINAL) ================= */
+/* ================= TOOLS ================= */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -306,9 +306,72 @@ h3 {
   transform: translateY(0);
 }
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE OPTIMIZATION ================= */
 @media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    padding: 80px 6% 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero-photo {
+    margin: 40px auto 0;
+  }
+
+  .hero-photo img {
+    width: 240px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    margin-right: 0;
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+  }
+
+  section {
+    padding: 80px 6%;
+  }
+
+  h3 {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .tools-grid img {
+    width: 40px;
+  }
+
   .about-wrap {
     grid-template-columns: 1fr;
+  }
+
+  .card img {
+    max-height: 240px;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    margin: 24px auto;
   }
 }
