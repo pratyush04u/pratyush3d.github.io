@@ -15,16 +15,16 @@
 
   <div class="social">
     <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">
-      <img src="logos/social/artstation.png" alt="ArtStation">
+      <img src="logos/social/artstation.png">
     </a>
     <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">
-      <img src="logos/social/linkedin.png" alt="LinkedIn">
+      <img src="logos/social/linkedin.png">
     </a>
     <a href="https://www.instagram.com/pratyush_b_official" target="_blank">
-      <img src="logos/social/instagram.png" alt="Instagram">
+      <img src="logos/social/instagram.png">
     </a>
     <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">
-      <img src="logos/social/facebook.png" alt="Facebook">
+      <img src="logos/social/facebook.png">
     </a>
   </div>
 </header>
@@ -45,7 +45,7 @@
   </div>
 
   <div class="hero-photo">
-    <img src="me.png" alt="Pratyush Biswas">
+    <img src="me.png">
   </div>
 </section>
 
@@ -68,26 +68,30 @@
 <section class="about reveal">
   <h3>About Me</h3>
 
-  <p>
-    I am a dedicated <strong>3D Artist</strong> specializing in
-    <strong>hard-surface modeling, game-ready assets, and product visualization</strong>.
-  </p>
+  <div class="about-wrap">
+    <div class="about-video">
+      <video src="media/about/about-video.mp4" autoplay muted loop playsinline></video>
+    </div>
 
-  <p>
-    With experience working on <strong>game props, realistic product renders,
-    and studio-style production pipelines</strong>, I follow industry-standard
-    workflows from blockout to final delivery.
-  </p>
+    <div class="about-text">
+      <p>
+        I am a <strong>seasoned 3D Artist</strong> specializing in
+        high-quality, game-ready hard-surface assets.
+      </p>
 
-  <p>
-    I work comfortably across tools like
-    <strong>Maya, Blender, ZBrush, Substance Painter, Marmoset Toolbag,
-    Unreal Engine, and Unity</strong>.
-  </p>
+      <p>
+        My core focus is on <strong>vintage and sci-fi styled</strong> props,
+        vehicles, and assets optimized for
+        <strong>real-time PC and mobile games</strong>.
+      </p>
 
-  <p>
-    My focus is always on <strong>visual clarity, realism, and technical correctness</strong>.
-  </p>
+      <p>
+        I have worked with <strong>game studios</strong> and on various
+        <strong>freelance projects</strong>, including game assets,
+        CGI movie props, environments, and product visualization.
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- WORK -->
@@ -95,7 +99,6 @@
   <h3>Selected Work</h3>
 
   <div class="work-grid">
-
     <div class="card" data-project="awm-custom-skin">
       <img src="media/awm-custom-skin/cover.png">
       <span>AWM Custom Skin</span>
@@ -105,17 +108,6 @@
       <img src="media/cosmetic-product-visualization/cover.jpg">
       <span>Cosmetic Product</span>
     </div>
-
-    <div class="card" data-project="old-radio-game-prop">
-      <img src="media/old-radio-game-prop/cover.png">
-      <span>Old Radio Prop</span>
-    </div>
-
-    <div class="card" data-project="vintage-wall-phone">
-      <img src="media/vintage-wall-phone/cover.png">
-      <span>Vintage Wall Phone</span>
-    </div>
-
   </div>
 </section>
 
@@ -127,11 +119,6 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <!-- optional but recommended -->
-    <input type="hidden" name="_subject" value="New message from Portfolio Website">
-    <input type="hidden" name="_captcha" value="false">
-
     <button type="submit">Send Message</button>
   </form>
 </section>
@@ -145,4 +132,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
