@@ -69,18 +69,16 @@
   <h3>About Me</h3>
 
   <div class="about-wrap">
-    <!-- LEFT : VIDEO -->
     <div class="about-video">
       <video
         src="media/about/about-video.mp4"
         autoplay
         muted
         loop
-        playsinline
-      ></video>
+        playsinline>
+      </video>
     </div>
 
-    <!-- RIGHT : TEXT (ORIGINAL CONTENT) -->
     <div class="about-text">
       <p>
         I am a dedicated <strong>3D Artist</strong> specializing in
@@ -106,33 +104,12 @@
   </div>
 </section>
 
-<!-- WORK -->
+<!-- WORK (AUTO FROM JSON) -->
 <section id="work" class="work reveal">
   <h3>Selected Work</h3>
 
-  <div class="work-grid">
-
-    <div class="card" data-project="awm-custom-skin">
-      <img src="media/awm-custom-skin/cover.png">
-      <span>AWM Custom Skin</span>
-    </div>
-
-    <div class="card" data-project="cosmetic-product-visualization">
-      <img src="media/cosmetic-product-visualization/cover.jpg">
-      <span>Cosmetic Product</span>
-    </div>
-
-    <div class="card" data-project="old-radio-game-prop">
-      <img src="media/old-radio-game-prop/cover.png">
-      <span>Old Radio Prop</span>
-    </div>
-
-    <div class="card" data-project="vintage-wall-phone">
-      <img src="media/vintage-wall-phone/cover.png">
-      <span>Vintage Wall Phone</span>
-    </div>
-
-  </div>
+  <!-- ⚠️ Cards will be injected by script.js -->
+  <div class="work-grid" id="workGrid"></div>
 </section>
 
 <!-- CONTACT -->
