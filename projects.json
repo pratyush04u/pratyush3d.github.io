@@ -1,0 +1,27 @@
+[
+  {
+    "title": "AWM Custom Skin",
+    "folder": "awm-custom-skin",
+    "cover": "cover.png"
+  },
+  {
+    "title": "Cosmetic Product",
+    "folder": "cosmetic-product-visualization",
+    "cover": "cover.jpg"
+  },
+  {
+    "title": "Old Radio Prop",
+    "folder": "old-radio-game-prop",
+    "cover": "cover.png"
+  },
+  {
+    "title": "Vintage Wall Phone",
+    "folder": "vintage-wall-phone",
+    "cover": "cover.png"
+  },
+  {
+    "title": "Retro Mining Lamp",
+    "folder": "retro-mining-lamp",
+    "cover": "cover.jpg"
+  }
+]
