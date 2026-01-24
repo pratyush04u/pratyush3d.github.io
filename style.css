@@ -30,7 +30,7 @@ body {
 }
 
 .logo span {
-  color: #6cff00;
+  color: #FFD84D; /* 🔥 yellow */
 }
 
 /* Social */
@@ -98,7 +98,7 @@ body {
 }
 
 .hero h2 span {
-  color: #6cff00;
+  color: #FFD84D;
 }
 
 .hero p {
@@ -112,15 +112,15 @@ body {
 .btn {
   padding: 12px 26px;
   border-radius: 30px;
-  border: 2px solid #6cff00;
-  color: #6cff00;
+  border: 2px solid #FFD84D;
+  color: #FFD84D;
   margin-right: 15px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background: #6cff00;
+  background: #FFD84D;
   color: black;
 }
 
@@ -138,8 +138,8 @@ body {
   width: 320px;
   border-radius: 22px;
   box-shadow:
-    0 0 40px rgba(108,255,0,0.6),
-    0 0 80px rgba(108,255,0,0.3);
+    0 0 40px rgba(255,216,77,0.55),
+    0 0 80px rgba(255,216,77,0.25);
 }
 
 /* ================= SECTIONS ================= */
@@ -168,13 +168,13 @@ h3 {
   transition: 0.35s ease;
   filter:
     drop-shadow(0 0 10px rgba(255,255,255,0.45))
-    drop-shadow(0 0 22px rgba(108,255,0,0.55));
+    drop-shadow(0 0 22px rgba(255,216,77,0.55));
 }
 
 .tools-grid img:hover {
   filter:
     drop-shadow(0 0 16px rgba(255,255,255,0.75))
-    drop-shadow(0 0 36px rgba(108,255,0,0.85));
+    drop-shadow(0 0 36px rgba(255,216,77,0.85));
 }
 
 /* ================= ABOUT ================= */
@@ -195,7 +195,7 @@ h3 {
   border-radius: 18px;
   box-shadow:
     0 0 40px rgba(0,0,0,0.7),
-    0 0 60px rgba(108,255,0,0.15);
+    0 0 60px rgba(255,216,77,0.15);
 }
 
 .about-text {
@@ -209,7 +209,7 @@ h3 {
 }
 
 .about strong {
-  color: #6cff00;
+  color: #FFD84D;
 }
 
 /* ================= WORK ================= */
@@ -240,8 +240,8 @@ h3 {
 
 .card:hover img {
   box-shadow:
-    0 0 25px rgba(108,255,0,0.4),
-    0 0 60px rgba(108,255,0,0.15);
+    0 0 25px rgba(255,216,77,0.4),
+    0 0 60px rgba(255,216,77,0.15);
 }
 
 /* ================= CONTACT ================= */
@@ -262,7 +262,7 @@ h3 {
 .contact button {
   padding: 14px;
   width: 100%;
-  background: #6cff00;
+  background: #FFD84D;
   border: none;
   font-weight: bold;
   cursor: pointer;
