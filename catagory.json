@@ -1,0 +1,23 @@
+[
+  {
+    "id": "game-assets",
+    "title": "Game Assets",
+    "subtitle": "Game-ready props, weapons & environments",
+    "coverType": "video",
+    "cover": "media/categories/game-assets.mp4"
+  },
+  {
+    "id": "product-visualization",
+    "title": "Product Visualization",
+    "subtitle": "Real-world products with studio lighting",
+    "coverType": "image",
+    "cover": "media/categories/product-visualization.jpg"
+  },
+  {
+    "id": "cgi-film-assets",
+    "title": "CGI / Film Assets",
+    "subtitle": "Cinematic props & film-quality assets",
+    "coverType": "video",
+    "cover": "media/categories/cgi-film-assets.mp4"
+  }
+]
