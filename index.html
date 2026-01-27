@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pratyush Biswas | 3D Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="logo">PRATYUSH<span>3D</span></div>
+
+  <div class="social">
+    <a href="https://www.artstation.com/pratyushbiswas2" target="_blank">
+      <img src="logos/social/artstation.png" alt="ArtStation">
+    </a>
+    <a href="https://www.linkedin.com/in/pratyush-biswas-5a8a912b2" target="_blank">
+      <img src="logos/social/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/pratyush_b_official" target="_blank">
+      <img src="logos/social/instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/share/15UVmNqVnVA/" target="_blank">
+      <img src="logos/social/facebook.png" alt="Facebook">
+    </a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <!-- 🔥 HERO BACKGROUND VIDEO -->
+  <div class="hero-bg">
+    <video
+      src="media/hero/hero-bg.mp4"
+      autoplay
+      muted
+      loop
+      playsinline>
+    </video>
+  </div>
+
+  <div class="hero-content">
+    <h1>Pratyush Biswas</h1>
+    <h2>Concepts Forged Into <span>3D Visuals</span></h2>
+    <p>Hard-Surface · Game Assets · Product Visualization</p>
+
+    <div class="hero-buttons">
+      <a href="#categories" class="btn">Explore Work</a>
+      <a href="Pratyush_Biswas_CV.pdf" class="btn outline" download>Download CV</a>
+    </div>
+  </div>
+
+  <div class="hero-photo">
+    <img src="me.png" alt="Pratyush Biswas">
+  </div>
+</section>
+
+<!-- ================= TOOLS ================= -->
+<section class="tools reveal">
+  <h3>Tools I Use</h3>
+  <div class="tools-grid">
+    <img src="logos/software/maya.png" alt="Maya">
+    <img src="logos/software/blender.png" alt="Blender">
+    <img src="logos/software/zbrush.png" alt="ZBrush">
+    <img src="logos/software/substance-painter.png" alt="Substance Painter">
+    <img src="logos/software/marmoset-toolbag.png" alt="Marmoset">
+    <img src="logos/software/photoshop.png" alt="Photoshop">
+    <img src="logos/software/unreal-engine.png" alt="Unreal Engine">
+    <img src="logos/software/unity.png" alt="Unity">
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about reveal">
+  <h3>About Me</h3>
+
+  <div class="about-wrap">
+
+    <!-- 🎥 TESLA ABOUT VIDEO (RESTORED) -->
+    <div class="about-video">
+      <video
+        src="media/about/about-tesla.mp4"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+
+    <div class="about-text">
+      <p>
+        I work as a <strong>3D Artist</strong> focused on building
+        <strong>game-ready, real-time assets</strong> that are meant to
+        survive actual engines — not just look good in renders.
+      </p>
+
+      <p>
+        My core strength lies in <strong>hard-surface modeling</strong>,
+        with a deep love for <strong>vintage machinery</strong>,
+        <strong>sci-fi props</strong>, and mechanically believable designs.
+      </p>
+
+      <p>
+        I’ve contributed to <strong>game assets</strong>,
+        <strong>CGI film props</strong>, <strong>environments</strong>,
+        and <strong>product visualization</strong> across
+        studio and freelance pipelines.
+      </p>
+
+      <p>
+        Clean topology, optimized UVs, and assets that
+        <strong>actually perform in engines</strong>
+        matter more to me than flashy renders.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section id="categories" class="categories reveal">
+  <h3>Work Categories</h3>
+
+  <!-- Injected via JSON -->
+  <div class="category-grid" id="categoryGrid"></div>
+</section>
+
+<!-- ================= PROJECT LIST ================= -->
+<section id="work" class="work reveal">
+  <h3>Selected Projects</h3>
+  <div class="work-grid" id="workGrid"></div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact reveal" id="contact">
+  <h3>Contact</h3>
+
+  <div class="contact-wrap">
+
+    <!-- FORM -->
+    <form action="https://formspree.io/f/mpqwvpdp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- 🎥 2:3 CONTACT VIDEO -->
+    <div class="contact-video">
+      <video
+        src="media/contact/contact-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline>
+      </video>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer reveal">
+  <div class="footer-inner">
+    <h3>Ready to Bring Your Vision to Life?</h3>
+
+    <p>
+      Let’s collaborate on your next project —
+      <strong>game assets</strong>,
+      <strong>product visualization</strong>,
+      or <strong>cinematic props</strong>.
+    </p>
+
+    <a href="#contact" class="btn">Get In Touch</a>
+
+    <span class="footer-line"></span>
+    <small>© Pratyush Biswas — 3D Artist</small>
+  </div>
+</footer>
+
+<!-- ================= MODAL ================= -->
+<div class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "game",
+    "title": "GAME ASSETS",
+    "coverType": "video",
+    "cover": "media/categories/game-assets.mp4"
+  },
+  {
+    "id": "product",
+    "title": "PRODUCT VISUALIZATION",
+    "coverType": "video",
+    "cover": "media/categories/product-visualization.mp4"
+  },
+  {
+    "id": "cgi",
+    "title": "CGI FILM ASSETS",
+    "coverType": "video",
+    "cover": "media/categories/cgi-film-assets.mp4"
+  }
+]

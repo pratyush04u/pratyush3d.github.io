@@ -1,0 +1,38 @@
+[
+  {
+    "title": "AWM Custom Skin",
+    "folder": "awm-custom-skin",
+    "cover": "cover.png",
+    "category": "game"
+  },
+  {
+    "title": "Old Radio Game Prop",
+    "folder": "old-radio-game-prop",
+    "cover": "cover.png",
+    "category": "game"
+  },
+  {
+    "title": "Vintage Wall Phone",
+    "folder": "vintage-wall-phone",
+    "cover": "cover.png",
+    "category": "game"
+  },
+  {
+    "title": "Retro Mining Lamp",
+    "folder": "retro-mining-lamp",
+    "cover": "cover.jpg",
+    "category": "game"
+  },
+  {
+    "title": "Cosmetic Product Visualization",
+    "folder": "cosmetic-product-visualization",
+    "cover": "cover.jpg",
+    "category": "product"
+  },
+  {
+    "title": "Energy System 101",
+    "folder": "energy-system-101-product-visualization",
+    "cover": "cover.png",
+    "category": "product"
+  }
+]
